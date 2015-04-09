@@ -1,0 +1,29 @@
+{
+  "name": "flowchart",
+  "version": "1.0.0",
+  "description": "a quick utility for walking through a flowchart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "bin": {
+    "flowchart": "./index.js"
+  },
+  "preferGlobal": true,
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pmcelhaney/flowchart.git"
+  },
+  "keywords": [
+    "flowchart",
+    "expert-system",
+    "cli",
+    "help"
+  ]
+}

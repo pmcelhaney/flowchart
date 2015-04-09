@@ -1,0 +1,66 @@
+ENTER 
+Has the change been committed?
+No: NOT_COMMITTED
+Yes: COMMITTED
+
+NOT_COMMITTED
+Is the change in the staging index?
+No: CHECKOUT_FILENAME
+Yes: IS_IN_STAGING_INDEX
+
+CHECKOUT_FILENAME
+checkout -- filename
+
+IS_IN_STAGING_INDEX
+Are there changes you want to preserve in the working directory?
+No: RESET_HARD
+Yes: RESET_FILENAME
+
+RESET_FILENAME
+For each file: reset <filename> && checkout -- <filename>
+
+COMMITTED
+Do you want to keep a reference to the committed change in your log?
+No: ASK_SHARED_BRANCH
+Yes: REVERT
+
+ASK_SHARED_BRANCH
+Is this a shared branch?
+Yes: NO_REWRITE_HISTORY
+No: ASK_MOST_RECENT_COMMITS
+
+ASK_MOST_RECENT_COMMITS
+Is the change in the most recent commit(s)?
+No: REBASE_INTERACTIVE
+Yes: ASK_PRESERVE_CHANGES
+
+REBASE_INTERACTIVES
+rebase --interactive
+
+ASK_PRESERVE_CHANGES
+Are there changes you want to preserve in the working directory?
+No: RESET_HARD
+Yes: RESET_COMMIT_ID
+
+RESET_HARD
+reset --hard
+
+RESET_HARD_COMMIT_ID
+reset --hard <commit_id>
+
+RESET_COMMIT_ID
+reset <commit_id>
+
+REBASE_INTERACTIVE
+rebase --interactive
+
+REVERT
+revert
+
+NO_REWRITE_HISTORY
+It is not appropriate to rewrite history:
+OK: REVERT
+
+SOURCE
+@emmajanehw
+
