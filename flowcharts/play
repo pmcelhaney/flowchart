@@ -1,0 +1,28 @@
+ENTER
+So you want to make a flow chart of your own?
+Yes: MAKE_FLOWCHARTS_DIR
+No: NEVERMIND
+
+NEVERMIND
+Okay, nevermind then. Have a great day!
+
+MAKE_FLOWCHARTS_DIR
+Make a directory under your home directory called "flowcharts". Do you need help with this step?
+Yes: MAKE_FLOWCHARTS_DIR_HELP 
+No:	COPY_FILE
+
+MAKE_FLOWCHARTS_DIR_HELP
+Okay, when you get back to the command prompt, type "mdkir ~/flowcharts"
+OK: COPY_FILE
+
+COPY_FILE
+Now download this file <https://raw.githubusercontent.com/pmcelhaney/flowchart/master/flowcharts/play> and put it in your new flowcharts directory. Do you need help?
+Yes: COPY_FILE_HELP
+No: DONE
+
+COPY_FILE_HELP
+When you get back to the command prompt, type curl https://raw.githubusercontent.com/pmcelhaney/flowchart/master/flowcharts/play > ~/flowcharts/choose-your-own-adventure. 
+OK: DONE
+
+DONE
+Now open the file you just created in a text editor. It's a copy of the file that defines the flow chart you're using now. Try changing a couple of the steps or adding your own. When you're done, type "flowchart <filename-you-chose>" to test it out!
