@@ -67,11 +67,21 @@ var DEAD_END = {
 };
 
 var receiveInput = function (text) {
+	var nextNodeId;
+
 	var matchingExit = _.find(node.exits, function (exit) {
 		return exit[0].toLowerCase() === text.toLowerCase();
 	});
+
 	if (matchingExit) {
-		var nextNodeId = matchingExit[1];
+		nextNodeId = matchingExit[1];
+	}
+
+	if (node.exits.length === 1) {
+		nextNodeId = node.exits[0][1];
+	}
+
+	if (nextNodeId) {
 		node = _.findWhere(nodes, {id: nextNodeId}) || DEAD_END;
 	}
 
