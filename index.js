@@ -41,8 +41,6 @@ var readFlowchart = function(target, callback) {
 
 	var targetPath = fs.existsSync(userPath) ? userPath : builtInPath;
 
-	console.log(userPath);
-
 	if (!fs.existsSync(targetPath)) {
 		console.log('There is no flowchart called ' + target + '. File <' + userPath + '> not found.');
 		process.exit(1);
