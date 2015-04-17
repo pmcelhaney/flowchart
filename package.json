@@ -1,6 +1,6 @@
 {
   "name": "flowchart",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "a quick utility for walking through a flowchart",
   "main": "index.js",
   "scripts": {
