@@ -69,12 +69,12 @@ var DEAD_END = {
 var receiveInput = function (text) {
 	var nextNodeId;
 
-	var matchingExit = _.find(node.exits, function (exit) {
-		return exit[0].toLowerCase() === text.toLowerCase();
+	var matchingExits = _.filter(node.exits, function (exit) {
+		return exit[0].toLowerCase().slice(0, text.length) === text.toLowerCase();
 	});
 
-	if (matchingExit) {
-		nextNodeId = matchingExit[1];
+	if (matchingExits.length === 1) {
+		nextNodeId = matchingExits[0][1];
 	}
 
 	if (node.exits.length === 1) {
